@@ -17,118 +17,6 @@
             color: #1f2937;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        .background-shapes {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .shape {
-            position: absolute;
-            opacity: 0.1;
-            animation: float 20s infinite ease-in-out;
-        }
-
-        .shape-1 {
-            top: 10%;
-            left: 10%;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, #fbbf24, transparent);
-            border-radius: 50%;
-            animation-delay: -2s;
-        }
-
-        .shape-2 {
-            top: 60%;
-            right: 15%;
-            width: 150px;
-            height: 150px;
-            background: linear-gradient(45deg, #10b981, transparent);
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            animation-delay: -8s;
-        }
-
-        .shape-3 {
-            bottom: 20%;
-            left: 20%;
-            width: 180px;
-            height: 180px;
-            background: radial-gradient(ellipse, #ef4444, transparent);
-            border-radius: 50%;
-            animation-delay: -15s;
-        }
-
-        .shape-4 {
-            top: 40%;
-            left: 60%;
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #8b5cf6, transparent);
-            border-radius: 20px;
-            animation-delay: -5s;
-            transform: rotate(45deg);
-        }
-
-        .shape-5 {
-            top: 80%;
-            right: 40%;
-            width: 100px;
-            height: 100px;
-            background: radial-gradient(circle, #06b6d4, transparent);
-            border-radius: 50% 10% 50% 10%;
-            animation-delay: -12s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            25% { transform: translateY(-20px) rotate(5deg); }
-            50% { transform: translateY(10px) rotate(-5deg); }
-            75% { transform: translateY(-15px) rotate(3deg); }
-        }
-
-        .particle-system {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 50%;
-            animation: particles 15s infinite linear;
-        }
-
-        @keyframes particles {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
         }
 
         .container {
@@ -246,26 +134,11 @@
         }
 
         .section {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
+            background: white;
             margin: 2rem 0;
             border-radius: 20px;
             padding: 3rem 0;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            position: relative;
-        }
-
-        .section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
-            border-radius: 20px;
-            pointer-events: none;
         }
 
         .section h2 {
@@ -296,31 +169,15 @@
         }
 
         .skill-card {
-            background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(226, 232, 240, 0.9) 100%);
-            backdrop-filter: blur(10px);
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             padding: 2rem;
             border-radius: 15px;
             text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            position: relative;
-        }
-
-        .skill-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            border-radius: 15px;
-            pointer-events: none;
+            transition: transform 0.3s ease;
         }
 
         .skill-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
 
         .skill-card h3 {
@@ -353,30 +210,15 @@
         }
 
         .project-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(15px);
+            background: white;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            position: relative;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            pointer-events: none;
+            transition: transform 0.3s ease;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
         .project-header {
@@ -429,25 +271,10 @@
 
         .contact-info {
             text-align: center;
-            background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(226, 232, 240, 0.9) 100%);
-            backdrop-filter: blur(15px);
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             padding: 2rem;
             border-radius: 15px;
             margin-top: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            position: relative;
-        }
-
-        .contact-info::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            border-radius: 15px;
-            pointer-events: none;
         }
 
         .contact-links {
@@ -690,24 +517,6 @@
     </footer>
 
     <script>
-        // Create particle system
-        function createParticles() {
-            const particleContainer = document.getElementById('particles');
-            const particleCount = 50;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 15 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                particleContainer.appendChild(particle);
-            }
-        }
-
-        // Initialize particles
-        createParticles();
-
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -755,17 +564,6 @@
             card.style.transform = 'translateY(30px)';
             card.style.transition = 'all 0.6s ease';
             observer.observe(card);
-        });
-
-        // Add parallax effect to shapes
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const shapes = document.querySelectorAll('.shape');
-            
-            shapes.forEach((shape, index) => {
-                const speed = 0.5 + (index * 0.1);
-                shape.style.transform = `translateY(${scrolled * speed}px)`;
-            });
         });
     </script>
 </body>
